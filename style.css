@@ -1,0 +1,116 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Arvo";
+  background: #040A18;
+  background-size: cover;
+  overflow-x: hidden;
+  font-size: 2rem;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__inner-container {
+  height: 300px;
+  width: 690px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.container__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  color: #C3CED6;
+}
+
+.container__typing {
+  margin-left: 1rem;
+  position: relative;
+  color: #36454F;
+}
+
+.container__typing::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: -1rem;
+  top: 0;
+  bottom: 0;
+  border-right: 0.6rem solid #C3CED6;
+  -webkit-animation: blink 400ms ease-in-out infinite;
+          animation: blink 400ms ease-in-out infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .container__inner-container {
+    width: 240px;
+  }
+  .container__content {
+    font-size: 1.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .container__typing {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
